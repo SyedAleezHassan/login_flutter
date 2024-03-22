@@ -1,5 +1,7 @@
+//import 'package:flutter/material.dart';
+
 import 'package:flutter/material.dart';
-import 'package:u_tube/login.dart';
+import 'package:u_tube/loin.dart';
 
 void main() {
   runApp(MyApp());
@@ -12,29 +14,19 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-          appBar: AppBar(
-            title: const Text(
-              "LOGIN",
-              style: TextStyle(
-                  fontSize: 24,
-                  fontFamily: 'Roboto',
-                  fontStyle: FontStyle.normal,
-                  fontWeight: FontWeight.w200),
-            ),
-            backgroundColor: Colors.red,
+        body: login(),
+        appBar: AppBar(
+          title: const Text(
+            "Login Page",
+            style: TextStyle(
+                fontFamily: "Roboto",
+                fontSize: 27,
+                fontWeight: FontWeight.bold),
           ),
-          body: Stack(
-            fit: StackFit.expand,
-            children: [
-              Image.network(
-                  'https://static.vecteezy.com/system/resources/previews/024/085/651/non_2x/abstract-gradient-mobile-wallpaper-set-abstract-art-wallpaper-smartphone-wallpapers-android-apps-background-design-vector.jpg'),
-              const Column(
-                children: [
-                  login(),
-                ],
-              ),
-            ],
-          )),
+          backgroundColor: Colors.red,
+        ),
+        backgroundColor: Colors.yellowAccent,
+      ),
     );
   }
 }
